@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet"  type = "text/css" href = ""/> 
+    <title>Order Form </title>
+</head>
+
+<style>
+    th{
+        text-align: left;
+    }
+
+    body{
+        font-size: 20px;
+    }
+
+    .buttton{
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    
+    div{
+        text-align: center;
+        border-style: solid;
+        margin-left: 300px;
+        width: 60%;
+    }
+
+    #alignment{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+</style>
+<body>
+    <center>
+        <img src="pot pic 2.jpg" alt="P0t"
+        style="border-radius: 50%;float:inline-start;height: 60px;">
+    <b><h1 style="color:blue;font-size:xx-large;font-size:x-large ; font-weight: 400;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">POTBELLY.COM</h1></b>
+    <h4 style="color:hotpink;font-weight: 200;font-size:x-large; font-family: sans-serif;"><b>Your No. 1 Food Ordering & Delivery Platform.</b></h4>
+     </center>
+<title>FOOD ORDER FORM</title>
+<div>
+    <h2>============PRICE LIST============</h2>
+    <table width = "40%" id="alignment">
+        <tr>
+            <th>Food Item</th>
+            <th></th>
+            <th>Price (Naira)</th>
+        </tr>
+
+        <tr>
+            <td>Chicken Pizza</td>
+            <td> - </td>
+            <td>700.00</td>
+        </tr>
+
+        <tr>
+            <td>Vegetable Pizza</td>
+            <td> - </td>
+            <td>500.00</td>
+        </tr>
+
+        <tr>
+            <td>Chicken Kottu</td>
+            <td> - </td>
+            <td>300.00</td>
+        </tr>
+
+        <tr>
+            <td>Vegetable Kottu</td>
+            <td> - </td>
+            <td>200.00</td>
+        </tr>
+
+        <tr>
+            <td>Water Bottle</td>
+            <td> - </td>
+            <td>70.00</td>
+        </tr>
+    </table>
+
+    <h3>POTBELLY - ORDER FORM</h3>
+    <table style="background-color: aquamarine; margin-left: 100px;">
+        <tr>
+            <td>Branch : </td>
+            <td>
+                <select>
+                    <option>--Select Item--</option>
+                    <option>Galle</option>
+                    <option>Colombo</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>User name:</td>
+            <td>
+            <input type="text">
+            </td>
+        </tr>
+        <tr><td>Mobile: </td>
+            <td><input type="text" id="mblenmb" onfocusout="checkmob()"></td></tr>
+        </table>
+        <br>
+
+        <form name="tblform" >
+            <table width="80%"  id="alignment" >
+            <tr>
+            <th>Food Item</th>
+            <th> </th>
+            <th>Quantity</th>
+            <th>Price</th> 
+            </tr>
+            <tr> 
+            <td>Item 1:</td> 
+            <td>
+            <select id="item1">
+            <option value="1">--Select Item--</option> 
+            <option value="Chicken pizza">Chicken pizza</option> 
+            <option value="Vegetable Pizza">Vegetable Pizza</option> 
+            <option value="Chicken Kottu">Chicken Kottu</option> 
+            <option value="Vegetable Kottu">Vegetable Kottu</option> 
+            <option value="Water Bottle ">Water Bottle </option> 
+            </select>
+            </td> 
+            <td><input type="number" value="0" id="q1"></td>
+            <td><input type="text" id="p1"></td>
+            </tr>   
+            <tr>
+            <td>Item 2:</td>
+            <td>
+            <select id="item2"> 
+            <option value="1">--Select Item--</option> 
+            <option value="Chicken pizza">Chicken pizza</option> 
+            <option value="Vegetable Pizza">Vegetable Pizza</option> 
+            <option value="Chicken Kottu">Chicken Kottu</option>  
+            <option value="Vegetable Kottu">Vegetable Kottu</option>
+            <option value="Water Bottle ">Water Bottle </option>  
+            </select>
+            </td>
+            <td><input  type="number" value="0" id="q2"></td>  
+            <td><input type="text"  id="p2"></td>  
+            </tr> 
+            <tr>
+            <td>Item 3:</td>
+            <td><select id="item3">  
+            <option value="1">--Select Item--</option> 
+            <option value="Chicken pizza">Chicken pizza</option>  
+            <option value="Vegetable Pizza">Vegetable Pizza</option> 
+            <option value="Chicken Kottu">Chicken Kottu</option>
+            <option value="Vegetable Kottu">Vegetable Kottu</option> 
+            <option value="Water Bottle ">Water Bottle </option> 
+            </select>
+            </td>
+            <td><input type="number" value="0" id="q3"></td>
+            <td><input type="text"  id="p3"></td> 
+            </tr> 
+            <tr>
+            <td>Item 4:</td>
+            <td><select id="item4">   
+            <option value="1">--Select Item--</option> 
+            <option value="Chicken pizza">Chicken pizza</option>   
+            <option value="Vegetable Pizza">Vegetable Pizza</option> 
+            <option value="Chicken Kottu">Chicken Kottu</option> 
+            <option value="Vegetable Kottu">Vegetable Kottu</option> 
+            <option value="Water Bottle ">Water Bottle </option>   
+            </select>
+            </td>
+            <td><input type="number" value="0" id="q4"></td>
+            <td><input type="text"  id="p4"></td> 
+            </tr>    
+            <tr>
+            <td></td> 
+            <td></td> 
+            <td><input type="submit" class="button" value="Create Bill" onclick=createBill()></td>
+            <td><input type="reset" class="button" value="Clear"></td>
+            </tr>
+            </table>
+            </form>
+</div>
+
+
+<script>
+    function checkmob () {
+    var
+    str = document.getElementById ("mblenmb").value;
+    
+    var ptr =/^07[072568] [0-9] {7} $ /;
+
+    var chck = ptr.test (str);
+
+    if(!chck)
+    alert("Mobile number is Incorrect");
+    }
+
+    function createBill () {
+        var index = 0;
+        var items = ["null", "null", "null", "null"];
+        var quantities = ["null", "null", "null", "null"];
+        var prices = ["null", "null", "null", "null"];
+
+        var e1 = document.getElementById ("item1");
+        var itemselected1 = e1.options [e1.selectedIndex].value;
+        if(itemselected1! ="1") {
+            items[index] = itemselected1;
+            quantities[index] = document.getElementById ("q1").value;
+            prices[index] = document.getElementById ("p1").value;
+            index++;
+        }
+        
+        var e2 = document.getElementById ("item2");
+        var itemselected2 = e2.options [e2.selectedIndex].value;
+        if(itemselected2! ="1") {
+            items[index] = itemselected2;
+            quantities[index] = document.getElementById ("q2").value;
+            prices[index] = document.getElementById ("p2").value;
+            index++;
+        }
+
+        var e3 = document.getElementById ("item3");
+        var itemselected3 = e3.options [e3.selectedIndex].value;
+        if(itemselected3! ="1") {
+            items[index] = itemselected3;
+            quantities[index] = document.getElementById ("q3").value;
+            prices[index] = document.getElementById ("p3").value;
+            index++;
+        }
+
+        var e4 = document.getElementById ("item4");
+        itemselected4 = e4.options [e4.selectedIndex].value;
+        if(itemselected4! ="1") {
+            items[index] = itemselected4;
+            quantities[index] = document.getElementById ("q4").value;
+            prices[index] = document.getElementById ("p4").value;
+            index++;
+        }
+
+            var fTot = 0;
+            strt (1);
+            for(var i = 0; i < index;i++) {
+                document.write ("<tr>");
+                    createtbl (items[i]);
+                    createtbl (quantities[i]);
+                    createtbl (prices[i]);
+                    var tot = parseInt (quantities[i]) *parseInt (prices[i]);
+                    document.write ("<td>" + tot + "</td>");
+                    fTot += tot;
+                    document.write ("</tr>");
+                }
+
+                document.write ("<tr><td colspan = \"3\"><strong>TOTAL</strong></td><td>" + fTot + "</td><tr>");
+                    strt(2);
+                }
+
+                function createtbl (x) {
+                    document.write ("<td>" + x + "</td>");
+                }
+
+                function strt (n) {
+                    if(n==1) {
+                        document.writeIn ("<h1 style = \"text-align:center;\">The Bill</h1>");
+                        document.writeIn ("<table width = \"90%\" border = \"1\">");
+                            document.writeIn ("<tr><th>ITEMS</th><th>QUANTITY</th><th>PRICE</th><th></th></tr>");
+                    }
+
+                    else
+                    document.write ("</table>");
+                }
+
+                function createTot (x,y) {
+                    var tot = parseInt (x) *parseInt (y);
+                    document.write ("<td>" + tot + "</td>");
+                }
+                
+</script>
+    
+</body>
+</html>
+
+
+    
