@@ -46,6 +46,16 @@ openCity(cityName,elmnt,color){
         
 
     }
+  
+    
+
+
+    
+    
+
+
+
+
     
 
   // Initialize and add the map

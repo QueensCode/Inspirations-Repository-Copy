@@ -8,6 +8,56 @@
     <title>PotBelly.com</title>
 </head>
 <style>
+    #searchbar {
+        margin-left: 15%;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: aliceblue;
+    }
+
+    input[ type=text] {
+        width: 20%;
+        -webkit-transition: width 0.15s ease-in-out;
+        transition: width 0.15s ease-in-out;
+        font-size: 0.8em;
+        text-transform:capitalize;
+    }
+
+    /*when the input feld gets focus.
+    change its width to 100% */
+    input[type=text] focus {
+        width: 70%;
+
+    }
+
+    #list {
+        font-size: 1em;
+        margin: 90px;
+
+    }
+
+    input {
+        color: navy;
+        text-rendering: geometricPrecision;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+
+    }
+
+    .meals {
+        display: none;
+    }
+
+    .list-items {
+        display: list-item;
+    }
+
+    
     .project-image{
         border-radius: 5px;
         box-shadow: 0 4 6px 0 rgba(34,60,80,.16);
@@ -229,17 +279,117 @@ html{
         <br>
 </div>
 <br>
-
-<form class="example" action="/action_page.php">
-    <input type="text" placeholder="Search..." name="search">
-    <button type="submit"><img src="Search Icon.png"><i class="search"></i></button>
-
+<br>
+    </center>
+<center>
+    <input id="searchbar" onkeyup="search_meal()" type="text" name="search" placeholder="Search meals...">
+    <label for="meal" style="color: cornsilk; align-content: flex-start;">Kindly Choose from the list</label>
+</center>
+    <ol id="list" style="color:fuchsia;">
+        <li class="meals"><a href="PotBelly.NG.html" style="color: fuchsia;">Pancakes Delight</a></li>
+        <li class="meals"><a href="Vegan Delight.png" style="color: fuchsia;">Weight Watchers Meal </a></li>
+        <li class="meals"><a href="Turkey , Srimps with Jollof Rice.png" style="color: fuchsia;">Lovely Jollof Rice</a></li>
+        <li class="meals"><a href="Oven Grilled  Full Chicken and baked Potatoes.png" style="color: fuchsia;">Baked Potatoes & Full Grilled Chicken</a></li>
+        <li class="meals"><a href="Sandwich, Fish Fingers, Omelette & Lettuce.png" style="color: fuchsia;">Light Meal</li>
+        <li class="meals"><a href="Pork Chops.png" style="color: fuchsia;">Lamb Chops</a></li>
+        <li class="meals"><a href="Oha Soup.jpg" style="color: fuchsia;">Oha Soup</a></li>
+        <li class="meals"><a href="White Rice & Goat Meat Sauce.png" style="color: fuchsia;">Savoury Meal</a></li>
+        <li class="meals"><a href="PuffPuff.html" style="color: fuchsia;">Puffpuff</a></li>
+        <li class="meals"><a href="akamu akara.png" style="color: fuchsia;">Pap & Bean cake</a></li>
+        <li class="meals"><a href="art food.jpg" style="color: fuchsia;">Artist Food</a></li>
+        <li class="meals"><a href="fried rice and shrimps.png" style="color: fuchsia;">Cool Fried Rice</a></li>
+        <li class="meals"><a href="cat fish stew.jpg" style="color: fuchsia;">Catfish Peppersoup</a></li>
+        <li class="meals"><a href="Vegetable salade.png" style="color: fuchsia;">Scrambled Eggs Galore</a></li>
+        <li class="meals"><a href="vegetable soup.png" style="color: fuchsia;">Edikainkong Vegetable Soup</a></li>
+        <li class="meals"><a href="egusi me.jpg" style="color: fuchsia;">Egusi Soup</a></li>
+        <li class="meals"><a href="Grilled ChickenChops.png" style="color: fuchsia;">Kings Grilled Chicken</a></li>
+        <li class="meals"><a href="turkey and spagetti.png" style="color: fuchsia;">Spaghetti Extravaganza</a></li>
+        <li class="meals"><a href="Sunnyside up Eggs & Toasted Bread.png" style="color: fuchsia;">Sunnyside up</a></li>
+        <li class="meals"><a href="White Soup or Nsala Soup.jpg" style="color: fuchsia;">White Soup</a></li>
+        <li class="meals"><a href="salade galore.png" style="color: fuchsia;">Salad Galore</a></li>
+        <li class="meals"><a href="Afang Soup.png" style="color: fuchsia;">Afang Soup Delight</a></li>
+        <li class="meals"><a href="Sea Food Special.png" style="color: fuchsia;">Sea Food Special</a></li>
+        <li class="meals"><a href="Amala & Ewedu.png" style="color: fuchsia;">Amala & Ewedu Soup</a></li>
+        <li class="meals"><a href="White rice and minced beef salad.png" style="color: fuchsia;">White Rice & Minced Meat Stir Fries</a></li>
+        <li class="meals"><a href="Assorted Meat Chops.png" style="color: fuchsia;">Assorted Meat Stew</a></li>
+        <li class="meals"><a href="Barbecued Chicked Wings and Chips.jpg" style="color: fuchsia;">Chips & Barbecued Chicken Wings</a></li>
+        <li class="meals"><a href="flex meal.png" style="color: fuchsia;">Flex Spaghetti</a></li>
+        <li class="meals"><a href="Be thanking God meal.jpg" style="color: fuchsia;">Executive Meal</a></li>
+        <li class="meals"><a href="pork head.png" style="color: fuchsia;">Cow Head</a></li>
+        <li class="meals"><a href="stew.png" style="color: fuchsia;">Goat Meat Stew</a></li>
+        <li class="meals"><a href="Bacon ans sweet corn.png" style="color: fuchsia;">Steak & Sweet Corn Meal</a></li>
+        <li class="meals"><a href="Yam and ugba.jpg" style="color: fuchsia;">Boiled Yam & Ugba Sauce</a></li>
+        <li class="meals"><a href="Beetroot Salad with Baked Potatoes.png" style="color: fuchsia;">Royal Salad</a></li>
+        <li class="meals"><a href="Shawarma Special.png" style="color: fuchsia;">Chicken Sharwama Special</a></li>
+        <li class="meals"><a href="basmatic rice with sauce.png" style="color: fuchsia;">Happiness Rice</a></li>
+        <li class="meals"><a href="I love this meal.png" style="color: fuchsia;">Expressions</a></li>
+        <li class="meals"><a href="shawama wraps with potatoes.png" style="color: fuchsia;">Sharwama with Baked Potatoes</a></li>
+        <li class="meals"><a href="Spagetti and vegetable sauce.png" style="color: fuchsia;">Spaghetti & White Rice with Sauces</a></li>
+        <li class="meals"><a href="quitely eat.png" style="color: fuchsia;">Quietly Eat</a></li>
+        <li class="meals"><a href="Spaggeti and Rice Meal.jpg" style="color: fuchsia;">White Rice & Chicken Chops</li>
+        <li class="meals"><a href="song rice.png" style="color: fuchsia;">Song Rice</a></li>
+        <li class="meals"><a href="somthing sweet.png" style="color: fuchsia;">Something Sweet</li>
+        <li class="meals"><a href="Ripe Plantain Porriage.png" style="color: fuchsia;">Ripe Plantain Porriage with Goat Meat</li>
+        <li class="meals"><a href="Good FRUIT CAKE.png" style="color: fuchsia;">Fruit Cake</a></li>
+        <li class="meals"><a href="Barbecued Tilapia.png" style="color: fuchsia;">Barbecued Tilapia</a></li>
+        <li class="meals"><a href="Spaghetti & Chicken Tigh.png" style="color: fuchsia;">Spaghetti & Chicken</a></li>
+        <li class="meals"><a href="spiral snack.png" style="color: fuchsia;">Sausage Rolls</a></li>
+        <li class="meals"><a href="fried fish rolls.png" style="color: fuchsia;">Fish Rolls Perruzi</a></li>
+        <li class="meals"><a href="spaget and geens.png" style="color: fuchsia;">Jollof Spaghetti & Shredded Beef</a></a></li>
+        <li class="meals"><a href="Pasta Delight.jpg" style="color: fuchsia;">Spaghetti Galore</a></li>
+        <li class="meals"><a href="snail stew.jpg" style="color:fuchsia">Snail Stew with Smoked Fish</a></li>
+        <li class="meals"><a href="Snacks galore.png" style="color: fuchsia;">Assorted Small Chops</a></li>
+        <li class="meals"><a href="spagetti and beef new.png" style="color: fuchsia;">Noodles with Eggs</a></li>
+        <li class="meals"><a href="Prawn Exravaganza.jpg" style="color: fuchsia;">Prawn Extravaganza</a></li>
+        <li class="meals"><a href="Roasted Plantains with Vegetables.jpg" style="color: fuchsia;">Roasted Plantain & Vegetables</a></li>
+        <li class="meals"><a href="Shawama.jpg" style="color: fuchsia;">Sharwama for Real</a></li>
+        <li class="meals"><a href="amarant stire fries.png" style="color: fuchsia;">Amarant Stir Fries</a></li>
+        <li class="meals"><a href="Perpered Snails.jpg" style="color: fuchsia;">Peppered Snails</a></li>
+        <li class="meals"><a href="chops.png" style="color: fuchsia;">Chops</a></li>
+        <li class="meals"><a href="exquisite Breakfast.png" style="color: fuchsia;">Exquisite Breakfast</a></li>
+        <li class="meals"><a href="Something Light.png" style="color: fuchsia;">Something Light</a></li>
+        <li class="meals"><a href="craps perpersoup.png" style="color: fuchsia;">Crabs Peppersoup</a></li>
+        <li class="meals"><a href="Small Chops.jpg" style="color: fuchsia;">Small Chops</a></li>
+        <li class="meals"><a href="Brocolli, Beef Chops & Potatoes.png" style="color: fuchsia;">Vegetarian</a></li>
+        <li class="meals"><a href="plantains and pap.jpg" style="color: fuchsia;">Pap & Fried Plantains</a></li>
+        <li class="meals"><a href="Snacks assorted.png" style="color: fuchsia;">Assorted Snacks</a></li>
+        <li class="meals"><a href="Omelette and Toasted Bread.png" style="color: fuchsia;">Omelette with Toasted Bread</a></li>
+        <li class="meals"><a href="Shawama 2.jpg" style="color: fuchsia;">Shawama for you</a></li>
+        <li class="meals"><a href="Bacon ans sweet corn.png" style="color: fuchsia;">Bacon and Sweet Corn</a></li>
+        <li class="meals"><a href="Small Chops.jpg" style="color: fuchsia;">Small Chops</a></li>
+        <li class="meals"><a href="Oha soup new.png" style="color: fuchsia;">Oha Soup 2</a></li>
+    </li>
+        </ol>
 </form>
-    <br>
+<script>
+    //Javascript code
+    function search_meal() {
+        let input = document.getElementById('searchbar').value
+        input = input.toLowerCase();
+
+        let x = document.getElementsByClassName('meals');
+
+        for (i = 0; i < x.length; i++) {
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display = "none";
+            }
+            else {
+                x[i].style.display = "list-item";
+            }
+
+        }
+
+    }
+
+
+</script>
+ 
+
     <p style="color:fuchsia;font-size: small;font-style: italic;background-color:yellow;padding-top:0.5em;">
         <marquee></marquee>
     </p>
 </header>
+
 </center>
 <center>
     <div class="div4">
@@ -402,53 +552,18 @@ html{
                     <button onclick="myFunction()" class="dropbtn">Dropdown</button>
                     <div id="myDropdown" class="dropdown-content">
                         <input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction()">
-                        <a href="Prawn Exravaganza.jpg"> Prawns Extravaganza</a>
-                        <a href="akara pic.jpg"> Pap and Akara</a>
+                        <a href="Breakfast  .html"> Breakfast Meals</a>
+                        <a href="Lunch2.html">Lunch Meals</a>
 
-                        <a href="Small Chops.png"> Small Chops</a>
-                        <a href="Spaghetti Africana.jpg"> Spaghetti</a>
+                        <a href="Dinner2.html">Dinner Meals</a>
 
-                        <a href="Egusi for group.png">Egusi Soup</a>
-                        <a href="Afang Soup.png"> Afang Soup</a>
+                        <a href="Pasteries, Snacks and Chops.html">Pasteries & Chops</a>
+                        <a href="Products-egviolet kate.html"> Products</a>
 
-                        <a href="stew.png"> Stew</a>
-                        <a href="Barbecued Chicked Wings and Chips.jpg">Chicked Wings & Chips</a>
+                        <a href="Violet Integrated Farms.html"> Farms</a>
                        
-                        <a href="snail stew.jpg"> Snails Stew</a>
-                        <a href="Ofada Rice, DryFish & Plantains.png"> Ofada Rice/Plantains/Dry Fish</a>
 
-                        <a href="Good FRUIT CAKE.png"> Good Fruit Cake</a>
-                        <a href="white beans and fried plantains.png">White Beans/Fried Plantains</a> 
                         
-                        <a href="White Rice & Chicken.png">White Rice / Chicken</a>
-                        <a href="waffels and sausages.png"> Waffels and Sausages</a>
-
-                        <a href="veget soup 2.jpg">Vegetable Soup</a>
-                        <a href="Goat Meat Perpersoup.jpg">Goatmeat perpersoup</a>
-
-                        <a href="asun2.png">Asun</a>
-                        <a href="okro special.png"> Okro Soup Special</a>
-
-                        <a href="craps perpersoup.png">Crabs Perpersoup</a>
-                        <a href="turkey roasted.png">Roasted Turkey</a>
-                       
-                        <a href="Nsala Soup.jpg">Native/White Soup</a>
-                        <a href="Noodles with Cowtail.jpg">Noodles</a>
-
-                        <a href="Brocolli, Beef Chops & Potatoes.png">Brocolli/Beef/Potatoes</a>
-                        <a href="Amala & Ewedu.png">Amala/Ewedu</a>
-
-                        <a href="my kind of food.png">Fried Plantains/Chicken</a>
-                        <a href="must meal.png">Jollof Rice / Plantains </a> 
-                        
-                        <a href="fried rice and shrimps.png">Fried Rice with Shrimps</a>
-                        <a href="angara.png">African Salad</a>
-
-                        <a href="Pasta Delight.jpg">Lovely Pasta</a>
-                        <a href="Oha soup new.png">Oha Soup</a>
-
-                        <a href="perpered turkey.png">Perpered Turkey</a>
-                        <a href="Fruites.jpg">Fruits</a>
                      </div>
                 </div>
             </center>
@@ -908,11 +1023,11 @@ html{
             <img src="Sunnyside up Eggs & Toasted Bread.png" alt="Toasted Bread"
                 style="width: 80%; height: 500px; border-radius: 50px;">
             <div class="container">
-                <h2 style="color:blue;font-size:large;"></h2>
+                <h2 style="color:blue;font-size:large;">Sunnyside up</h2>
                 <p style="color:blue;font-size:x-large;"></p>
                 <p style="color:blue;font-size:large;">Meal No 19. </p>
                 <p style="color:blue;font-size: x-large;"></p>
-                <p style="color:blue;font-size: large;">Sunnyside Up Eggs & Toasted Bread. Enjoy with a cup of Tea/Coffee.
+                <p style="color:blue;font-size: large;"> Toasted Bread and Eggs
                 </p>
                 <p style="color:blue;font-size: x-large;"></p>
                 <h2 style="color:blue; font-weight: bolder;font-size: large;">N2,500.00</h2>
@@ -1033,11 +1148,10 @@ html{
         <div class="column">
             <img src="Amala & Ewedu.png" alt="Amala" style="width: 80%; height: 500px; border-radius: 50px;">
             <div class="container">
-                <h2 style="color:blue;">Amala & Ewedu Soup Complete</h2>
+                <h2 style="color:blue;font-size:large;">Amala & Ewedu Soup</h2>
                 <p style="color:blue;font-size:large;">Meal No 24. </p>
                 <p style="color:blue;font-size: x-large;"></p>
-                <p style="color:blue;font-size: medium;">Hot Amala and ewedu soup with
-                    Gbegiri(Beans Soup) & Stew. The Protein is Assorted Meats.
+                <p style="color:blue;font-size: medium;">Hot Amala and ewedu soup
                 </p>
                 <p style="color:blue;font-size: x-large;"></p>
                 <h2 style="color:blue; font-weight: bolder;font-size: large;">N8,500.00</h2>
@@ -1060,11 +1174,11 @@ html{
             <img src="White rice and minced beef salad.png" alt="Rice"
                 style="width:80%; height: 500px; border-radius: 50px;">
             <div class="container">
-                <h2 style="color:blue;font-size: large;">White Rice and Minced Meat Stir Fries.</h2>
+                <h2 style="color:blue;font-size: large;">White Rice & Minced Meat Stir Fries.</h2>
                 <p style="color:blue;font-size:large;">Meal No 25. </p>
                 <p style="color:blue;font-size: x-large;"></p>
-                <p style="color:blue;font-size: medium;">Cool Dish;
-                    White Rice, Vegetables, Minced Beef Stir fries. Order & please tell a Friend.</p>
+                <p style="color:blue;font-size: medium;">
+                    Order & please tell a Friend.</p>
                 <p style="color:blue;font-size: x-large;"></p>
                 <h2 style="color:blue; font-weight: bolder;font-size: large;">N4,000.00</h2>
                 <a href="PotBelly Order Form.html" style="color:red ;">Kindly Place Your Order </a>
@@ -1462,7 +1576,7 @@ html{
         <div class="column">
             <img src="White Rice & Chicken.png" alt="Rice" style="width: 80%; height: 500px; border-radius: 50px;">
             <div class="container">
-                <h2 style="color:blue;font-size: large;">White Rice Good</h2>
+                <h2 style="color:blue;font-size: large;">White Rice & Chicken Chops</h2>
                 <p style="color:blue;font-size:large;">Meal No 41. </p>
                 <p style="color:blue;font-size: x-large;"></p>
                 <p style="color:blue;font-size: medium;">
@@ -1739,7 +1853,7 @@ html{
         <div class="column">
             <img src="snail stew.jpg" alt="juice" style="width: 80%; height: 500px; border-radius: 50px;">
             <div class="container">
-                <h2 style="color:blue;font-size: larger;">3 Litres Snail Stew with Smoked Fish</h2>
+                <h2 style="color:blue;font-size: larger;">Snail Stew with Smoked Fish</h2>
                 <p style="color:blue;font-size:large;">Meal No 52.</p>
                 <p style="color:blue;font-size: x-large;"></p>
                 <p style="color:blue;font-size: medium;">Wonderful Stew.</p>
@@ -1767,7 +1881,7 @@ html{
                 <p style="color:blue;font-size:large;">Meal No 53. </p>
                 <p style="color:blue;font-size: x-large;"></p>
                 <p style="color:blue;font-size: medium;">
-                    It includes Puffpuff, Meat Pie, Sausages, Fried Meats, Spring Rolls.</p>
+                     Puffpuff, Meat Pie, Sausages, Fried Meats, Spring Rolls.</p>
                 <p style="color:blue;font-size: x-large;"></p>
                 <h2 style="color:blue; font-weight: bolder;font-size: large;">N30,000.00</h2>
                 <a href= "PotBelly Order Form.html" style="color:red ;">Kindly Place Your Order </a>
@@ -1865,7 +1979,7 @@ html{
         <div class="column">
             <img src="Shawama.jpg" alt="juice" style="width: 80%; height: 500px; border-radius: 50px;">
             <div class="container">
-                <h2 style="color:blue;font-size: larger;">Shawama For Real</h2>
+                <h2 style="color:blue;font-size: larger;">Shawama for Real</h2>
                 <p style="color:blue;font-size:large;">Meal No 57. </p>
                 <p style="color:blue;font-size: x-large;"></p>
                 <p style="color:blue;font-size: medium;">Carefully Prepared Shawama for You.</p>
@@ -1914,7 +2028,7 @@ html{
         <div class="column">
             <img src="Perpered Snails.jpg" alt="soup" style="width: 80%; height: 500px; border-radius: 50px;">
             <div class="container">
-                <h2 style="color:blue;font-size: larger;">Perpered Snails</h2>
+                <h2 style="color:blue;font-size: larger;">Peppered Snails</h2>
                 <p style="color:blue;font-size:large;">Meal No 59. </p>
                 <p style="color:blue;font-size: x-large;"></p>
                 <p style="color:blue;font-size: medium;">Carefully Prepared Snails.</p>
@@ -1941,7 +2055,7 @@ html{
                 <h2 style="color:blue;font-size: larger;">Chops</h2>
                 <p style="color:blue;font-size:large;">Meal No 60.</p>
                 <p style="color:blue;font-size: x-large;"></p>
-                <p style="color:blue;font-size: medium;">Tasty Assorted Small Chops good for parties.
+                <p style="color:blue;font-size: medium;">Tasty Assorted Small Chops.
                 </p>
                 <p style="color:blue;font-size: x-large;"></p>
                 <h2 style="color:blue;font-weight: bolder;font-size: large;">N30,000.00</h2>
@@ -2015,11 +2129,11 @@ html{
         <div class="column">
             <img src="craps perpersoup.png" alt="soup" style="width: 80%; height: 500px; border-radius: 50px;">
             <div class="container">
-                <h2 style="color:blue;font-size: large;">Crabs Perpersoup</h2>
+                <h2 style="color:blue;font-size: large;">Crabs Peppersoup</h2>
                 <p style="color:blue;font-size:large;">Meal No 63</p>
                 <p style="color:blue;font-size: x-large;"></p>
-                <p style="color:blue;font-size: medium;">Carefully Prepared Dish.
-                    Good Perpersoup.Please tell a Friend.</p>
+                <p style="color:blue;font-size: medium;">Carefully Prepared
+                     Peppersoup.</p>
                 <p style="color:blue;font-size: x-large;"></p>
                 <h2 style="color:blue; font-weight: bolder;font-size: large;">N10,000.00</h2>
                 <a href="PotBelly Order Form.html" style="color:red ;">Kindly Place Your Order </a>
@@ -2091,7 +2205,7 @@ html{
         <div class="column">
             <img src="plantains and pap.jpg" alt="juice" style="width: 80%; height: 500px; border-radius: 50px;">
             <div class="container">
-                <h2 style="color:blue;font-size: large;">Sharp Sharp Meal </h2>
+                <h2 style="color:blue;font-size: large;">Pap & Fried Plantains</h2>
                 <p style="color:blue;font-size:large;">Meal No 66 </p>
                 <p style="color:blue;font-size: x-large;"></p>
                 <p style="color:blue;font-size: medium;">Tasty Meal.
@@ -6269,6 +6383,29 @@ html{
             document.getElementById("main").
             style.marginLeft="0";
             }
-          </script>  
+          </script> 
+          
+          
+<script>
+          //Javascript code
+    function search_meal() {
+        let input = document.getElementById('searchbar').value
+        input = input.toLowerCase();
+
+        let x = document.getElementsByClassName('meals');
+
+        for (i = 0; i < x.length; i++) {
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display = "none";
+            }
+            else {
+                x[i].style.display = "list-item";
+            }
+
+        }
+
+    } 
+</script>
+
 </body>
 </html>

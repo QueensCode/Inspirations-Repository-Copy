@@ -1,0 +1,28 @@
+#searchbar{
+    margin-left: 15%;
+    padding: 15px;
+    border-radius: 10px;
+} 
+
+input[ type=text ] {
+    width: 30%;
+    -webkit-transition: width 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out;
+}
+
+/*when the input feld gets focus.
+change its width to 100% */
+input[type=text] focus {
+    width: 70%;
+}
+
+#list{
+    font-size: 1.5em;
+    margin: 90px;
+}
+
+.meals{
+    display:list-item;
+}
+
+
